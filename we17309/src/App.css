@@ -1,47 +1,93 @@
-#root {
-  max-width: 1280px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+#root{
   margin: 0 auto;
-  padding: 2rem;
+  
+  padding-top: 20px;
+}
+table {
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-table tr td,th{
-  border-bottom: 2px solid #61dafbaa;
-  padding: 10px;
  
 }
+#edit{
+  color: white;
+  padding: 10px 20px;
+  border: none;  
+  background-image: linear-gradient(to right, #0A2647 50%, #4649FF 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.5s ease-in-out;
+  border-radius: 5px;
+}
+#remove{
+  color: white;
+  padding: 10px 20px;
+  border: none;  
+  background-image: linear-gradient(to right, #850E35 50%, #FF0303 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+#edit:hover, #remove:hover{
+  background-position: 0%;
+  
+}
+
+/* Thuộc tính `background-image` sử dụng hàm `linear-gradient`, vẽ 2 màu trắng ở bên trái, và 2 màu khác nhau (#ffd166 và #ffd166) ở bên phải.
+Thuộc tính `background-size` sử dụng giá trị 200% 100%, nghĩa là chiều rộng của linear-gradient được kéo dài đúng 2 lần chiều rộng của button.
+Thuộc tính `background-position` sử dụng giá trị 100% ban đầu, để hiệu ứng màu chạy từ bên phải của button.
+Thuộc tính `transition` thiết lập thời gian chuyển động của hiệu ứng.
+
+Khi hover vào button, thuộc tính `background-position` sẽ được chuyển sang giá trị 0%, từ đó tạo hiệu ứng màu chuyển động sang trái. */
+
+ #add {
+  background-color: #6c52a8;
+  color: white;
+  padding: 10px 20px;
+  border: none;  
+  background-image: radial-gradient(circle at center left, #2D4059 0%, #2D4059 20%, #17B794 80%, #17B794 100%);
+  background-size: 200% 200%;
+  background-position: bottom right;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.25rem;
+}
+
+#add:hover {
+  background-position: top left;
+  background-image: radial-gradient(circle at center left, #ffd166 0%, #ffd166 20%, #6c52a8 80%, #6c52a8 100%);
+}
+/* h1 {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+#formsearch{
+  text-align: right;
+  padding-right: 30px;
+}
+#formsearch > input{
+  border: 1px solid #17B794;
+  border-radius: 20px ;
+  outline: 0;
+  padding: 7px 20px;
+ 
+  width: 400px;
+}
+
+#formsearch > input:focus{
+  border: 2px solid #4649FF;
+}
+#hoverSearch:hover{
+ background-color: #0A2647;
+
+}
+form span{
+  color: red;
+}
+
